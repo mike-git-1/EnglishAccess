@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- HikariConfig Bean Definition -->
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="jdbcUrl" value="jdbc:mariadb://localhost:3306/user_credentials"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
+        <property name="maximumPoolSize" value="10"/>
+        <property name="minimumIdle" value="5"/>
+        <property name="connectionTimeout" value="30000"/>
+        <property name="idleTimeout" value="600000"/>
+        <property name="maxLifetime" value="1800000"/>
+    </bean>
+    
+    <!-- DataSource Bean Definition -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <constructor-arg ref="hikariConfig"/>
+    </bean>
+</beans>
