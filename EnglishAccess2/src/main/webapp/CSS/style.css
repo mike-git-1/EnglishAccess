@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 * {
-	margin: 0;
 	padding: 0;
 	font-family:roboto;
 }
@@ -11,76 +10,112 @@ body{
 	background-color:black;
 }
 
-.loginform {
-	background-repeat:none;
-	margin-right:0;
-	margin-left:0;
-	position:absolute;
-	top:7%;
-	right:43%;
-	width:wrap;
-	height:wrap;
-	border:2px solid white;	
-	border-radius:20px;
-	padding:20px;
-	padding-bottom:40px;
-	text-align:center;
-	
-	
-}
 
-.loginform>h2{
-	text-align:center;
-	padding-bottom:50px;
-}
+.loginSection{
+	width:30%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5%;
+	border:2px solid beige;
+}
 
-h2{
-	color:white;
-}
+.login-head{
 
-form{
-	color:white;
-	font-family:roboto;
+color:white;
+text-align:center;
+font-size:30px;
+
+
 }
 
 #logo{
+	width:50%;
+	height:200px;
+	position:relative;
+	left:25%;
+}
+
+.loginform{
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	color:white;
+}
+
+.register-form{
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	color:white;
+}
+
+.register-form > label, input:not(.login-button){
+	margin-top:10px;
+	margin-bottom:10px;
+	display:block;
+}
+
+.register-form > input{
 	width:100%;
-	height:300px;
 }
 
 
-@keyframes fadeIn{
-	from {
-	opacity:0;
-	}
-	to {
-	opacity:1;
-	}
+
+
+.loginform > label, input:not(.login-buttom){
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#username, #pass{
+	width:100%;
+	height:25px;
+	text-indent:10px;
 }
 
 
-.warning{
-	background-color:beige;
-	margin-top:20px;
-	opacity:0;
-	animation:fadeIn 2s ease-in forwards;
-	animation-delay:1s;
+
+.button-container{
+	width:100%;
+	display:inline-block;
+	margin-top:40px;
+	margin-bottom:20px;
+	text-align:center;
+	
 }
-.login-button{
-	width:60px;
-	height:auto;
-	color:white;
+
+
+
+.login-button, .register-button{
+	width:40%;
 	background-color:green;
-}
-
-.register{
-	width:60px;
-	height:auto;
 	color:white;
+	padding:5px;
+	border:1px solid white;
+	
+
+}
+
+.register-button-container{
+	display:flex;
+	width:100%;
+	
+}
+
+.register-button-container > *{
+	width:40%;
+	margin-right:auto;
+	margin-left:auto;
 	background-color:green;
+	color:white;
 }
 
 
-.Register{
-	display:none;
+#login-redirect{
+	height:21.5px;
+	margin-top:auto;
+	margin-bottom:auto;
 }
+
+	
+	}

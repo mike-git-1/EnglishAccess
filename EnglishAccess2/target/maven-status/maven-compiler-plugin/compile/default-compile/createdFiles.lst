@@ -1,3 +1,4 @@
 com\example\servlet\DataSourceConfig.class
+com\example\servlet\add_note.class
 com\example\servlet\LoginServlet.class
 com\example\servlet\LogoutServlet.class
