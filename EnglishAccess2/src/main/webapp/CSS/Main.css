@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+
+.navbar{
+	width:100%;
+	display:flex;
+}
+
+#logout-button{
+	width:wrap;
+}
+
+*{
+    width: 99%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+body{
+	overflow:scroll;
+
+
+
+.main{
+	
+	width:100%;
+	display:flex;
+	height:600px;
+}
+
+
+.main-section{
+	width:70%;
+	background-color:rgb(168, 168, 158);
+	height:100%;
+	overflow :scroll;
+	padding:10px;
+}
+
+
+
+
+.utilities{
+	width:30%;
+	height:600px;
+	display:block;
+}
+
+.dictionary-box{
+    width: 100%;
+    height:50%;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color:rgb(187, 172, 172);
+    padding:10px;
+    border-color: black;
+
+}
+
+
+
+
+.container{
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.container > h1{
+    font-family: fantasy;
+    font-weight: lighter;
+    color:white;
+}
+
+.container > span{
+    font-family: sans-serif, 'Montserrat';
+    font-size: 20px;
+
+}
+
+.container > input{
+    height:30px;
+    border-radius: 20px;
+    text-indent: 10px;
+    border:none;
+    margin-top:10px;
+}
+
+#parts-of-speech > h3{
+    font-family:sans-serif, 'Montserrat';
+    text-transform: capitalize;
+    text-align: left;
+
+}
+
+
+
+#parts-of-speech > p:not(.example){
+    text-align: left;
+
+}
+.container > span{
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.container > button{
+    border:none;
+    margin-top:20px;
+    width:100px;
+    text-overflow: hidden;
+    background-color: rgb(73, 102, 46);
+    color:white;
+    border-radius:2px;
+    height:30px;
+    color:white;
+    font-weight: bold;
+    cursor:pointer;
+    box-shadow: 3px 3px #020202;
+    text-transform: capitalize;
+}
+
+
+.container > p{
+    text-align:left;
+    align-items: center;
+    text-overflow: wrap;
+    color:white;
+}
+
+
+
+.example{
+    
+    color:black;
+    text-align: left;
+}
+
+audio{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.Next{
+	margin-top:40px;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+}
+
+.Next button{
+	background-color:green;
+	color:white;
+	height:50px;
+}
+
+
+#logout-button{
+	background-color:green;	
+	width:100px;
+	border-radius:4px;
+	color:white;
+	height:40px;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+
+
+.Next button:hover{
+	background-color:#ccff33;
+	color:black;
+}
+
+
+#add-subtract-note{
+	display:flex;
+	width:wrap-content;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+
+#note-text{
+	width:100%;
+	height:100px;
+	resize:vertical;
+	
+}
+
+#notes-title{
+	font-family:sans-serif, 'Montserrat';
+	color:black;
+}
+
+#add-subtract-note > span{
+	border:2px solid black;
+	width:6%;
+	margin-left:0px;
+	margin-right:5px;
+	background-color:white;
+}
+
+.notes-section1{
+	width:100%;
+	color:white;
+	font-size:20px;
+	height: 46.5%;
+	overflow: scroll;
+}
+
+.single-note{
+	width: 100%;
+	background-color: rgb(189, 175, 175);
+	color: black;
+	font-family: sans-serif;
+	padding:10px;
+	font-size:15px;
+
+}
+
+.single-note > span{
+	padding-top:20px;
+}
+
+.remove{
+	color:white;
+	border:1px solid white;
+}
+	
+
+.highlightdefine{
+    background-color: yellow;
+}
+
+
+.remove{
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.remove:hover{
+	background-color: black;
+}
