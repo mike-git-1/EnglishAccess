@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-* {
+/* * {
 	padding: 0;
 	font-family:roboto;
 }
@@ -117,5 +117,632 @@ font-size:30px;
 	margin-bottom:auto;
 }
 
+	*/
 	
-	}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(../Images/background.png), linear-gradient(to right bottom, #0e0a6b, #06053e);
+  /* background covers entire viewport */
+  background-size: cover;
+  min-height: 100vh;
+  /* prevents scrollbars from appearin if content overflows viewport*/
+  overflow: hidden;
+  
+
+}
+
+header {
+  position: fixed;
+  width:100%;
+  background-color: RGB(38, 38, 38);
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+  z-index: 99;
+}
+
+.navbar {
+  padding: 22px 15px;
+  display:flex;
+  align-items: center;
+  max-width: 1900px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .menu-btn {
+  display: none;
+  color:  #fff;
+  cursor:pointer;
+  font-size: 1.5rem;
+}
+
+.navbar .logo {
+  display:flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navbar .links {
+  display: flex;
+  list-style: none;
+  gap: 6em;
+}
+
+.navbar .links .close-btn{
+  display: none;
+  color:#000;
+  cursor:pointer;
+  position:absolute;
+
+  right:20px;
+  top:20px;
+  font-size:1.5rem;
+}
+.navbar .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+  color: #0ba1ca;
+
+}
+
+.navbar .login-btn {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight:600;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+
+}
+.navbar .login-btn:hover {
+  background: #0ba1ca;
+  color: #fff;
+}
+
+.welcome-message {
+	margin-top: 150px;
+	margin-left: 22px;
+	color:  #fff;
+	font-size: 1.5rem;
+	
+}
+
+.blur-bg-overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;;
+  opacity:0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  transition: 0.1s ease;
+  z-index: 98;
+}
+
+.show-popup .blur-bg-overlay {
+
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-popup {
+  z-index:99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 720px;
+  width:100%;
+  opacity:0;
+  pointer-events: none;
+  background: #fff;
+  border: 2px solid #fff;
+  transform: translate(-50%, -100%);
+}
+
+.show-popup .form-popup {
+
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.1s;
+}
+
+.form-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right:12px;
+  color: #878484;
+  cursor: pointer;
+
+}
+.form-popup .form-box{
+
+  display: flex;
+}
+
+.form-box .form-details {
+
+  max-width: 330px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  padding: 20px 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+
+ }
+
+.login .form-details {
+
+  background: url("../Images/planet-earth-background.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.signup .form-details {
+  background: url("https://img.freepik.com/premium-photo/student-online-learning-from-home_158043-98.jpg?w=900");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-box h2 {
+  text-align: center;
+  font-family: "cinzel", sans-serif;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.form-box p:nth-of-type(2) {
+  display:inline-block;
+  margin-top: 14px;
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.form-box .form-content{
+
+  width: 100%;
+  padding: 30px;
+
+}
+form .input-field{
+
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+form .input-field input {
+  height:100%;
+  width:100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  border: 1px solid #717171;
+
+}
+.input-field input:focus {
+
+  border-color: #00bcd4;
+}
+
+.input-field input:is(:focus, :valid) {
+
+  padding: 16px 15px 0;
+
+}
+
+form .input-field label {
+
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #717171;
+
+  pointer-events: none;
+  transition: 0.2s ease;
+
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+  color: #00bcd4;
+  font-size: 0.75em;
+
+  transform: translateY(-120%);
+
+}
+
+.form-box a {
+
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.form-box a:hover {
+  text-decoration: underline
+}
+
+.form-box :where(.forgot-pass, .policy-text) {
+
+  display: inline-flex;
+  margin-top: 30px;
+  font-size:0.95rem;
+}
+
+form button {
+  width: 100%;
+  outline: none;
+  border:none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 24px 0;
+  color: #fff;
+  cursor: pointer;
+  background: #0ba1ca;
+  transition: 0.2s ease;
+
+}
+
+form button:hover {
+  background: #0097a7;
+
+}
+
+.form-box .bottom-link {
+  text-align: center;
+}
+
+.form-popup .signup, .form-popup.show-signup .login {
+  display:none;
+}
+
+.form-popup.show-signup .signup {
+  display:flex;
+}
+
+
+.signup .policy-text {
+  display:flex;
+  align-items: center;
+  
+ 
+	
+}
+
+.signup .policy-text  input {
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
+
+.warning {
+	font-size: 0.75em;
+	color: red;
+	margin-top:4px;
+	
+
+	
+	 
+}
+
+@media (max-width: 1000px) {
+
+  .navbar :is(.menu-btn, .links .close-btn){
+    display: block;
+  }
+
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .logo img {
+    display:none;
+  }
+
+  .navbar .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .navbar .links{
+    position: fixed;
+    z-index: 10;
+    left:-100%;
+    top:0;
+    width:100%;
+    height: 100vh;
+    display: block;
+    padding-top: 60px;
+    text-align: center;
+    background: #fff;
+    transition: 0.2s ease;
+  }
+
+  .navbar .links.show-menu{
+
+    left:0;
+  }
+
+  .navbar .links a{
+    color: #000;
+
+    font-size: 1.25rem;
+
+  }
+
+  .navbar .links li{
+    margin: 20px 0;
+  }
+  
+  .navbar .login-btn {
+    font-size:0.9rem;
+    padding: 7px 10px;
+  }
+
+}
+
+.home {
+  position: relative;
+  min-height:100vh;
+  /* overlay the squiggly white bkground on top
+  background-image: url(../Images/shape.png);*/
+  background-size: cover;
+  /*items snap left and center vertically*/
+  display:flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 90px;
+  overflow: hidden;
+}
+
+.text-box{
+  width: 50%;
+  /*z-index:99;*/
+
+}
+.text-box h1{
+  color: #68ceea;
+  font-size: 2.5em;
+  /* apply our custom animation, 'to_bottom' to the header element. 
+  make the element fade in and slide right smoothly over 1 second, and it will remain visible at the end of the animation. 1.3s delay before animation starts*/
+  animation: to_right 1s ease forwards 1.3s;
+
+}
+
+/* style the second h1 element*/
+.text-box h1:nth-child(2){
+  color: #fff;
+  font-size: 2em;
+  /* For the second h1 element, specifically, make the animation delay a bit longer*/
+  animation-delay: 1.5s;
+}
+
+.text-box p{
+  /*give spacing top and bottom*/
+  margin: 40px 0;
+  font-size:1.5em;
+  width: 70%;
+  color: #fff;
+  /* apply our custom animation, 'to_bottom' to the header element. 
+  make the element fade in and slide right smoothly over 1 second, and it will remain visible at the end of the animation. 1.7s delay before animation starts*/
+  animation: to_right 1s ease forwards 1.3s;
+}
+
+.btn-box {
+  display:flex;
+  /* give spacing between buttons*/
+  gap:20px;
+}
+
+.btn {
+  position: relative;
+  padding: 12px 30px;
+  font-size: 22px;
+  border: 2px solid #0ba1ca;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s;
+  /* apply our custom animation, 'to_bottom' to the header element. 
+  make the element fade in and slide right smoothly over 1 second, and it will remain visible at the end of the animation. 1.9s delay before animation starts*/
+  animation: to_right 1s ease forwards 1.9s;
+}
+
+/* styling each button differently on hover and no-hover*/
+.btn:hover, 
+.btn:nth-child(2) {
+  color: white;
+  background-color: #0ba1ca;
+  box-shadow: 0 0 15px #0ba1ca;
+}
+
+.btn:nth-child(2):hover {
+  color: black;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* style the rocket and the spaceman*/
+.home img{
+  /*position absolute inside relative.*
+  images will ignore space of its sibling .textbox within its positioned ancestor (.home)*/
+  position: absolute;
+  height: 100%;
+  /* images not interactable. Clicks go right through them*/
+  pointer-events: none;
+  /* move images ot the right*/
+  right: 50px;
+  bottom:0;
+}
+
+
+
+.text-box *{
+  /*make textbox invisible initially*/
+  opacity: 0;
+}
+
+/*we made everything with the .text-box class invisible initially, and then the animation will reveal them again
+but the span element is the only element that doesnt have an ainmation applied, so we make it visible from the start.*/
+.text-box span{
+  opacity: 1;
+}
+
+/* creates an animation called 'to_bottom'. 
+transitions from fully transparent (opacity=0) to opaque (1)
+moves element down (starts 50px above its original position, and then moves back down to original position (0px) on the y-axis)*/
+@keyframes to_bottom {
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* creates an animation called 'to_right'. 
+transitions from fully transparent (opacity=0) to opaque (1)
+moves element down (starts 50px to the left of its original position, and then moves back right to original position (0px) on the x-axis)*/
+@keyframes to_right {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* creates an animation called 'fade'. 
+transitions from fully transparent (opacity=0) to opaque (1)*/
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* creates an animation called 'person'. 
+ At both the start (0%) and the end (100%) of the animation, the element is positioned 30 pixels below its original position, making
+ the element appear to start from and return to this position. At the midpoint (50%) of the animation, the element moves up to 
+ 30 pixels above its original position. This creates a vertical bouncing effect.*/
+ 
+@keyframes person {
+  0%,100%{
+    transform: translateY(30px);
+  }
+  50%{
+    transform: translateY(-30px);
+  }
+}
+
+.person {
+  /*initially start 30px down, and invisible*/
+  transform: translateY(30px);
+  opacity: 0;
+  /* apply both the fade and person animations. 
+  smooth fade-in animation 
+  and infinite vertical bouncing effect for the spaceman (animation start and end slowly, with a faster pace in between.)*/
+  animation: fade 1.5s ease forwards, person 8s ease-in-out infinite;
+}
+
+
+/* creates an animation called 'rotate'. 
+rotates an element*/
+ @keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+.rocket {
+  /*initially invisible*/
+  opacity: 0;
+   /* apply both the fade and rocket animations.
+   constant speed throughout animation, and loops indefintitely */
+  animation: fade 1.5s ease forwards 1s, rotate 8s linear infinite;
+  /* The rotation will be centered around the point at 56% of the width and 53% of the height of the element.
+   This means the rotation will not be around the center but slightly offset*/
+  transform-origin: 56% 53%;
+}
+
+
+
+.stars {
+  /*position abosolute inside positoin static (html body). Takes up entire screen */
+  position: absolute;
+  width:100%;
+  height: 200%;
+  /* Moves the .stars element upwards by 30% of the height of its containing block.*/
+  background-image: url(../Images/stars.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  animation: fade 1.5s ease forwards 2s, rotate 120s linear infinite;
+}
+
+@media (max-width: 760px) {
+  .form-popup {
+    width: 95%;
+  }
+
+  .form-box .form-details {
+    display:none;
+  }
+
+  .form-box .form-content {
+    padding: 30px 20px;
+
+  }
+
+  
+}
+	

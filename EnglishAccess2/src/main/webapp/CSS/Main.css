@@ -1,12 +1,119 @@
 @charset "UTF-8";
-
-
-.navbar{
-	width:100%;
-	display:flex;
+*:not(i){
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-#logout-button{
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: RGB(38, 38, 38);
+
+}
+
+header.main-header {
+  position: fixed;
+  width:100%;
+  background-color: RGB(38, 38, 38);
+  left: 0;
+  top: 0;
+  padding: 0 10px;
+}
+
+.navbar {
+  padding: 22px 15px;
+  display:flex;
+  align-items: center;
+  max-width: 1900px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navbar .menu-btn {
+  display: none;
+  color:  #fff;
+  cursor:pointer;
+  font-size: 1.5rem;
+}
+
+.navbar .logo {
+  display:flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.navbar .links {
+  display: flex;
+  list-style: none;
+  gap: 6em;
+}
+
+.navbar .links .close-btn{
+  display: none;
+  color:#000;
+  cursor:pointer;
+  position:absolute;
+
+  right:20px;
+  top:20px;
+  font-size:1.5rem;
+}
+.navbar .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+  color: RGB(175, 152, 136);
+
+}
+
+.navbar .login-btn {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight:600;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+
+}
+.navbar .login-btn:hover {
+  background: RGB(175, 152, 136);
+  color: #fff;
+}
+
+
+
+
+.intro{
+	margin-left: 20px;
+	margin-top: 115px;
+	width:100%;
+	display:flex;
+	color:  #fff;
+}
+
+/*#logout-button{
 	width:wrap;
 }
 
@@ -14,50 +121,55 @@
     width: 99%;
     margin-right:auto;
     margin-left:auto;
-}
+} 
 
 body{
 	overflow:scroll;
-
-
+}*/
 
 .main{
 	
 	width:100%;
+	padding: 20px;
 	display:flex;
 	height:600px;
 }
 
 
 .main-section{
-	width:70%;
+	width:68%;
 	background-color:rgb(168, 168, 158);
 	height:100%;
-	overflow :scroll;
+	/*overflow-y :scroll;*/
 	padding:10px;
+	margin-right: 10px;
 }
 
 
 
 
 .utilities{
-	width:30%;
-	height:600px;
+	width:32%;
+	height:100%;
 	display:block;
+	
+	
 }
 
 .dictionary-box{
     width: 100%;
     height:50%;
-    overflow: scroll;
-    overflow-x: hidden;
-    background-color:rgb(187, 172, 172);
-    padding:10px;
+    padding: 10px;
+    /*overflow: scroll;*/
+    /*overflow-x: hidden;*/
+    background: #fff;
     border-color: black;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	overflow-y: auto;
+
 
 }
-
-
 
 
 .container{
@@ -65,13 +177,18 @@ body{
     margin-right:auto;
     margin-left:auto;
     display: block;
-    text-align: center;
+    text-align: left;
     padding-bottom: 10px;
+    
 }
 
+.container .content {
+	 padding-top:15px;
+	 padding-bottom: 30px;
+}
 
-.container > h1{
-    font-family: fantasy;
+/*.container > h1{
+    /*font-family: fantasy;
     font-weight: lighter;
     color:white;
 }
@@ -80,17 +197,97 @@ body{
     font-family: sans-serif, 'Montserrat';
     font-size: 20px;
 
+} */
+
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.container > input{
+.search-box input{
+  padding: 5px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid RGB(38, 38, 38);
+  font-size: 16px;
+  
+}
+
+.search-box button {
+  padding: 5px 0;
+  width: 25%;
+  background-color: RGB(38, 38, 38);
+  border:none;
+  outline:none;
+  color: #ffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*.container > input{
     height:30px;
     border-radius: 20px;
     text-indent: 10px;
     border:none;
     margin-top:10px;
+}*/
+
+
+.meanings-section .word {
+  display: flex;
+  justify-content: space-between;
+
 }
 
-#parts-of-speech > h3{
+.word h3 {
+	background-Color: RGB(175, 152, 136);
+    width: max-content;
+    text-Align: left;
+    padding: 10px;
+    margin: 0px;
+    color: white;
+}
+
+.meanings-section button{
+  background-color: transparent;
+  color: RGB(38, 38, 38);
+  border: none;
+  outline: none;
+  font-size: 1em;
+  cursor: pointer;;
+}
+
+.meanings-section .details {
+  display: flex;
+  /*set a gap between the flex elements*/
+  gap: 10px;
+  color: RGB(38, 38, 38, 0.5);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.meanings-section .word-definition {
+	margin-bottom:30px;
+}
+
+.example-bar {
+  font-style: italic;
+  border-left: 5px solid RGB(38, 38, 38);
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.error{
+  padding-top: 50px;
+  text-align: center;
+  color: RGB(38, 38, 38, 0.5);
+
+}
+
+/*#parts-of-speech > h3{
     font-family:sans-serif, 'Montserrat';
     text-transform: capitalize;
     text-align: left;
@@ -103,6 +300,7 @@ body{
     text-align: left;
 
 }
+
 .container > span{
     font-family:Arial, Helvetica, sans-serif;
     color:white;
@@ -122,15 +320,15 @@ body{
     cursor:pointer;
     box-shadow: 3px 3px #020202;
     text-transform: capitalize;
-}
+}*/
 
 
-.container > p{
+/*.container > p{
     text-align:left;
     align-items: center;
     text-overflow: wrap;
     color:white;
-}
+} 
 
 
 
@@ -143,7 +341,7 @@ body{
 audio{
 	margin-top:20px;
 	margin-bottom:10px;
-}
+}*/
 
 .Next{
 	margin-top:40px;
@@ -156,10 +354,11 @@ audio{
 	background-color:green;
 	color:white;
 	height:50px;
+	width: 100px;
 }
 
 
-#logout-button{
+/* #logout-button{
 	background-color:green;	
 	width:100px;
 	border-radius:4px;
@@ -167,7 +366,9 @@ audio{
 	height:40px;
 	margin-top:auto;
 	margin-bottom:auto;
-}
+} 
+
+*/
 
 
 .Next button:hover{
@@ -176,6 +377,7 @@ audio{
 }
 
 
+/*
 #add-subtract-note{
 	display:flex;
 	width:wrap-content;
@@ -188,6 +390,7 @@ audio{
 	width:100%;
 	height:100px;
 	resize:vertical;
+	
 	
 }
 
@@ -207,9 +410,11 @@ audio{
 .notes-section1{
 	width:100%;
 	color:white;
+	background: #f2f1e7;
 	font-size:20px;
-	height: 46.5%;
+	height: calc(50% - 5px);
 	overflow: scroll;
+	padding: 5px;
 }
 
 .single-note{
@@ -231,12 +436,15 @@ audio{
 	border:1px solid white;
 }
 	
-
+*/
 .highlightdefine{
-    background-color: yellow;
+    background-Color: RGB(175, 152, 136);
+    color: #fff;
+    display: inline-block;
+    padding: 2px 5px;
 }
 
-
+/*
 .remove{
 	cursor: pointer;
 	transition: background-color 0.3s ease-in-out;
@@ -244,4 +452,366 @@ audio{
 
 .remove:hover{
 	background-color: black;
+} 
+*/
+
+.wrapper {
+  margin-top: 15px;
+  display: grid;
+  /* create a gap between the child elements*/
+  gap: 15px;
+  /* once display grid is active, can define how child elements are placed. 
+  Place as many columns as it can fit into .wrapper with each column 265px wide*/
+  grid-template-columns: repeat(auto-fill, 265px);
+  overflow-y: auto;
+  max-height: 280px;
 }
+
+.wrapper li {
+  height: 250px;
+  list-style: none;
+  background-color: #ffff;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+}
+
+
+/* display flex on .add-box (alignment overidden in the next css)*/
+.add-box, .icon, .bottom-content, .settings .menu li, .popup, .note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* center the plus icon and 'add new note' text in column */
+.add-box {
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/*create the dashed circle around the '+' icon */
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  font-size: 40px;
+  color: #88abff;
+  border-radius: 50%;
+  /*center the plus icon within the circle*/
+  justify-content: center;
+  border: 2px dashed #88abff;
+  
+}
+
+/* style the 'add new note' text*/
+.add-box p {
+  color: #88abff;;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+
+/* arrange note details and the date stamp in column, with space btween them */
+.wrapper .note {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* add a max height to the container, otherwise, text content can spill outside. 
+add a scroll bar when text goes beyond in y-direction
+text that goes beyond in x-direction, make hidden
+overflow does not work unless the container has a set height*/
+.note .details {
+  max-height: 165px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* style the title of each note */
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* style the note contents */
+.note span {
+  display: block;
+  color: #575757;
+  font-size: 16px;
+  margin-top: 5px; 
+  
+  }
+
+/* styling the date stamp */
+.note .bottom-content {
+  padding-top: 10px;
+  /* apply a faint border between date and notes */
+  border-top: 1px solid #ccc;
+}
+
+/*style the data stamp*/
+.bottom-content span {
+  color: #6d6d6d;
+  font-size: 14px;
+  
+}
+
+/*styling the elipses tht will open options for edit/delete*/
+.bottom-content .settings {
+  color: #6d6d6d;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+.settings {
+  position: relative;
+
+}
+
+/* styling the menu container */
+.settings .menu {
+  /*position abs inside position relative element. Place flush at the bottom edge  of container and extend right edge of element 5px beyond the right edge of container*/
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  padding: 5px 0;
+  /* make background opaque */
+  background: #fff;
+  border-radius: 4px;
+  /* make it invisible */
+  transform: scale(0);
+  /*element 'grows' from the bottom right corner. For animations*/
+  transform-origin: bottom right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  /*the transition of a transform (when revealing the menu on hover)*/
+  transition: transform 0.2s ease;
+}
+
+
+/* TRIGGERED BY JAVASCRIPT
+this selector applies styles to .menu elements only when its parent with the class .settings is in a hover state.*/
+.settings.show .menu {
+  /*revel the menu on click */
+  transform: scale(1); 
+
+} 
+
+/* style the menu options that appear when elipses is clicked */
+.settings .menu li {
+  height: 25px;
+  /* overriding border-radius set earlier */
+  font-size: 16px;
+  border-radius: 0;
+  padding: 17px 15px;
+    /* align edit icon and 'edit' text to the left. Same with the delete */
+  justify-content: flex-start;
+  cursor: pointer;
+
+}
+
+.menu li:hover {
+  background: #f5f5f5;
+
+}
+
+/*style the edit and delete icons */
+.menu li i {
+  /*adding some space between icon and text*/
+  padding-right: 8px;
+}
+
+
+.popup-box {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  /* appear in front of others except .popup with higher z-index=3*/
+  z-index: 2;
+  width: 100%;
+  /* shaded background */
+  background: rgba(0,0,0,0.4);
+}
+
+/*styling the actual popup form*/
+.popup-box .popup {
+  /*center on screen*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*higher z-index means this absolute element will appear in front of others when they overlap,
+  including the shaded overlay*/
+  z-index: 3;
+  /*will not grow past 400px*/
+  max-width: 400px;
+  /*takes up entire container width (max:400px)*/
+  width: 100%;
+  /* center the contents. (.popup was made a flex container earlier). We
+  center it since the width of contents is not 100%, it is 100%-15px. IDK why*/
+  justify-content: center;
+  border-radius: 5px;
+  transform: translate(-50%,-50%);
+
+}
+
+/*make shaded overlay and popup form hidden from the start*/
+.popup-box , .popup-box .popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/*TRIGGERED BY JAVASCRIPT
+reveals the popup form when the 'add new note' button is clicked.
+.popup-box.show = targets any element that has both the popup-box and show classes*/
+.popup-box.show , .popup-box.show .popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*styling the form content*/
+.popup .content {
+  width: calc(100% - 15px);
+  background-color: #fff;
+  border-radius: 5px;
+} 
+
+/*styling the form header */
+.popup .content .note-header {
+  padding: 15px 25px;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+/*styling the form title */
+.content .note-header p {
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+/*styling the cancel button */
+.content .note-header i{
+  color: #8b8989;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+/*styling the form body*/
+.content fieldset {
+  margin: 15px 25px 35px;
+  border: none;
+  outline: none;
+}
+
+/* styling each container containing the form fields */
+.content fieldset .row{
+  margin-bottom: 20px;
+}
+
+
+
+/*style the captions */
+fieldset .row label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/*targets all <input> and <textarea> elements inside any <form> element within the .content class.*/
+.content fieldset :where(input, textarea) {
+  width: 100%;
+  /* height for textarea overriden next css*/
+  height: 50px; 
+  /*font size and padding of input*/
+  font-size: 17px;
+  padding: 0 15px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #999;
+
+}
+
+/* style the description text field */
+.content fieldset textarea {
+  height: 150px;
+  /*remove ability to resize textarea*/
+  resize: none;
+  /*override padding from earlier*/
+  padding: 8px 15px;
+
+}
+
+
+/*style the 'add note' button */
+.content fieldset button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 4px;
+  background: #a55233;
+  cursor: pointer;
+
+}
+
+@media (max-width: 1000px) {
+
+  .navbar :is(.menu-btn, .links .close-btn){
+    display: block;
+  }
+
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .logo img {
+    display:none;
+  }
+
+  .navbar .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .navbar .links{
+    position: fixed;
+    z-index: 10;
+    left:-100%;
+    top:0;
+    width:100%;
+    height: 100vh;
+    display: block;
+    padding-top: 60px;
+    text-align: center;
+    background: #fff;
+    transition: 0.2s ease;
+  }
+
+  .navbar .links.show-menu{
+
+    left:0;
+  }
+
+  .navbar .links a{
+    color: #000;
+
+    font-size: 1.25rem;
+
+  }
+
+  .navbar .links li{
+    margin: 20px 0;
+  }
+  
+  .navbar .login-btn {
+    font-size:0.9rem;
+    padding: 7px 10px;
+  }
+
+}
+
+
